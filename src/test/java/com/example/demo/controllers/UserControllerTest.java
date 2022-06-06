@@ -2,11 +2,10 @@ package com.example.demo.controllers;
 
 import com.example.demo.percistence.models.User;
 import com.example.demo.services.UserService;
-import org.aspectj.lang.annotation.Before;
+import com.sun.xml.bind.v2.TODO;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.modelmapper.internal.util.Assert;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
@@ -14,13 +13,11 @@ import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.http.HttpHeaders;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -28,11 +25,12 @@ import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(SpringExtension.class)
 class UserControllerTest {
     @Autowired
-    private TestRestTemplate restTemplate;
+    private TestRestTemplate testRestTemplate;
     private UserService userService;
 
+
     @LocalServerPort
-    int localServerPort;
+    private int localServerPort;
 
     private MockMvc mockMvc;
 
@@ -49,8 +47,11 @@ class UserControllerTest {
     }
 
     @Test
-    void findAllUsers() {
-
+    void findAllUsers() { //TODO ask why using RestTemplate and TestRestTemplate at the same time!
+        this.testRestTemplate = new TestRestTemplate();
+        String URI = "http://localhost:" + localServerPort + "/api/users";
+        ResponseEntity<String> userResponseEntity = testRestTemplate.getForEntity(URI, String.class);
+        //assertEquals(200, userResponseEntity.getStatusCodeValue());
     }
 
     @Test
@@ -61,13 +62,20 @@ class UserControllerTest {
         org.springframework.http.HttpHeaders httpHeaders = new org.springframework.http.HttpHeaders();
         HttpEntity<User> httpEntity = new HttpEntity(user, httpHeaders);
 
-        ResponseEntity<String> result = this.restTemplate.postForEntity(uri, httpEntity, String.class);
+        ResponseEntity<String> result = this.testRestTemplate.postForEntity(uri, httpEntity, String.class);
 
         assertEquals(200, result.getStatusCodeValue());
     }
 
     @Test
     void getUser() {
+        User user = mockedUser();
+        this.testRestTemplate = new TestRestTemplate();
+
+        final String URI = "http://localhost:" + localServerPort + "/api/users";
+
+        ResponseEntity<String> responseEntity = testRestTemplate.getForEntity(URI, String.class);
+        assertEquals(responseEntity.getStatusCodeValue(), 200);
     }
 
     @Test
