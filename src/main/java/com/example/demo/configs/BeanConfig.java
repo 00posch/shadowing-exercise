@@ -19,7 +19,7 @@ public class BeanConfig {
     }
 
     @Bean
-    CommandLineRunner commandLineRunner(UserRepository repository) {
+    public CommandLineRunner userRepositoryToMock(UserRepository repository) {
         return args -> {
             User manel = new User(1, "manel");
 

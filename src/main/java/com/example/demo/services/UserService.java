@@ -19,7 +19,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-public class UserService extends UserRepo {
+public class UserService {
     private UserRepository userRepository;
 
     private final UserConverter userConverter;
