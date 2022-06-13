@@ -10,13 +10,9 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.Cacheable;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.security.InvalidParameterException;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("api/")
@@ -50,7 +46,7 @@ public class UserController {
 
     @GetMapping("users/{id}")
     public User getUser(@PathVariable("id") Integer id) {
-        return usersService.getUser(id);
+        return usersService.findUserById(id);
     }
 
    @PutMapping("users/{id}")
