@@ -1,0 +1,9 @@
+server:
+  port: ${SERVER_PORT:8080}
+spring:
+  config:
+    activate:
+      on-profile: local-qa
+  output:
+    ansi:
+      enabled: ALWAYS

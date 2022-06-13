@@ -1,22 +1,17 @@
 package com.example.demo.controllers;
 
 import com.example.demo.commands.UserDto;
-import com.example.demo.exceptions.UserNotFoundException;
 import com.example.demo.percistence.models.User;
-import com.example.demo.percistence.repository.UserRepository;
-import com.example.demo.services.UserService;
+import com.example.demo.percistence.repository.UserJpaRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.test.web.server.LocalServerPort;
-import org.springframework.cache.CacheManager;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -24,11 +19,9 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -44,7 +37,7 @@ class UserControllerTest {
     private int localServerPort;
     private MockMvc mockMvc;
     @MockBean
-    protected UserRepository mockedUserRepository;
+    protected UserJpaRepository mockedUserRepository;
 
     private User userEntity() {
         return User.builder()

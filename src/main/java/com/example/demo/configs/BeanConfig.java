@@ -1,8 +1,7 @@
 package com.example.demo.configs;
 
 import com.example.demo.percistence.models.User;
-import com.example.demo.percistence.repository.UserRepo;
-import com.example.demo.percistence.repository.UserRepository;
+import com.example.demo.percistence.repository.UserJpaRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
@@ -19,7 +18,7 @@ public class BeanConfig {
     }
 
     @Bean
-    public CommandLineRunner userRepositoryToMock(UserRepository repository) {
+    public CommandLineRunner userRepositoryToMock(UserJpaRepository repository) {
         return args -> {
             User manel = new User(1, "manel");
 
