@@ -28,10 +28,9 @@ public class UserRepositoryStaticImpl implements UserRepository{
     }
 
     @Override
-    public User saveUser(User user) {
-        usersList.add(user);
-        return user;
-        //TODO this does not look right
+    public void saveUser(User usr) {
+        this.user = usr;
+        usersList.add(usr);
     }
 
     @Override

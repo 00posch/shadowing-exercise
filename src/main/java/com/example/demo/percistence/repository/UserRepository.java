@@ -11,6 +11,6 @@ public interface UserRepository {
 
     Optional<User> getUserById(Integer id);
     List<User> getAllUsers();
-    User saveUser(User user);
+    void saveUser(User user);
     void setUser(User user);
 }

@@ -21,8 +21,8 @@ public class UserRepositoryDBImpl implements UserRepository {
     }
 
     @Override
-    public User saveUser(User user) {
-        return jpaRepository.save(user);
+    public void saveUser(User user) {
+        jpaRepository.save(user);
     }
 
     @Override
