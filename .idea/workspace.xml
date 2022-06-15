@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18ff99a7-116e-4588-9a43-66ef3d14e475" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/percistence/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/percistence/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/percistence/repository/UserRepositoryDBImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/percistence/repository/UserRepositoryDBImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/percistence/repository/UserRepositoryStaticImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/percistence/repository/UserRepositoryStaticImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/demo/services/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/demo/services/UserServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/percistence/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/percistence/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/percistence/repository/UserRepositoryDBImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/percistence/repository/UserRepositoryDBImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/percistence/repository/UserRepositoryStaticImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/percistence/repository/UserRepositoryStaticImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/services/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/demo/services/UserServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/demo/services/UserServiceTest.class" afterDir="false" />
-    </list>
+    <list default="true" id="18ff99a7-116e-4588-9a43-66ef3d14e475" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
