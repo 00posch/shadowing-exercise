@@ -47,7 +47,11 @@ public class UserService {
         User user = userConverter.convertUserToEntity(addUserDto);
         userRepository.saveUser(user);
         return userConverter.convertUserToDto(user);
+        //TODO this service method does not pass because of the userConverter that keeps returning id and username null!
+    }
 
+    public void createUser(User user) {
+        userRepository.saveUser(user);
     }
 
     public List<UserDto> findAllUsers() {

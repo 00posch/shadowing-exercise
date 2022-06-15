@@ -109,9 +109,9 @@ class UserServiceTest {
     @Test
     void shouldAddUser() {
         User user = mockedUser();
-        UserDto userDto = userConverter.convertUserToDto(user);
-        userConverter.convertUserToDto(user);
-        Mockito.when(testUserService.addUser(addUserDto)).thenReturn(userDto);
+        //UserDto userDto = userConverter.convertUserToDto(user);
+        //Mockito.when(testUserService.addUser(addUserDto)).thenReturn(userDto);
+        testUserService.createUser(user);
         Mockito.verify(userRepository).saveUser(user);
     }
 
