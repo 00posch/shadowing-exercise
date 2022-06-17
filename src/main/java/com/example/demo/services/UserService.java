@@ -25,7 +25,6 @@ import java.util.stream.Collectors;
 
 @Service
 public class UserService {
-    @Value("${spring.profiles.active}")
     private String activeProfile;
     private ProfileManager profile;
     private UserRepositoryStaticImpl userRepositoryStatic;

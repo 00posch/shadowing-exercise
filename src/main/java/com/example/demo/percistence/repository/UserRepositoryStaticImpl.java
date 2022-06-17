@@ -6,8 +6,8 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.logging.Logger;
 
-@Repository
 public class UserRepositoryStaticImpl implements UserRepository{
     private List<User> usersList;
     private User user;
@@ -25,18 +25,21 @@ public class UserRepositoryStaticImpl implements UserRepository{
     @Override
     public List<User> getAllUsers() {
         return usersList;
+
     }
 
     @Override
     public void saveUser(User usr) {
         this.user = usr;
         usersList.add(usr);
+        System.out.println(usersList);
     }
 
     @Override
     public void setUser(User user) {
         if (getUserById(user.getId()).isPresent()) {
             usersList.add(user);
+            System.out.println(usersList);
         } else {
             throw new UserNotUpdated();
         }

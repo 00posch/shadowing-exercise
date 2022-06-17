@@ -15,14 +15,14 @@ public class GlobalConfiguration {
     private ConfigurableEnvironment environment;
     private List<User> usersList;
 
-    @Bean
+    /*@Bean
     @ConditionalOnProperty(name = "spring.config.activate.on-profile", havingValue = "production")
     public UserRepositoryDBImpl getUserRepositoryDBImpl() {
         return new UserRepositoryDBImpl();
-    }
+    }*/
 
     @Bean
-    @ConditionalOnProperty(name = "spring.config.activate.on-profile", havingValue = "qa")
+    @ConditionalOnProperty(name = "spring.profiles.activate", havingValue = "qa")
     public UserRepositoryStaticImpl getUserRepositoryStaticImpl() {
         return new UserRepositoryStaticImpl(usersList);
     }

@@ -2,14 +2,23 @@ package com.example.demo.percistence.repository;
 
 import com.example.demo.exceptions.UserNotUpdated;
 import com.example.demo.percistence.models.User;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
+@Repository
+@Primary
 public class UserRepositoryDBImpl implements UserRepository {
     private User userEntity;
-    private JpaRepository<User, Integer> jpaRepository;
+    //private JpaRepository<User, Integer> jpaRepository;
+    private UserJpaRepository jpaRepository;
+
+    public UserRepositoryDBImpl(UserJpaRepository jpaRepository) {
+        this.jpaRepository = jpaRepository;
+    }
+
     @Override
     public Optional<User> getUserById(Integer id) {
         return jpaRepository.findById(id);

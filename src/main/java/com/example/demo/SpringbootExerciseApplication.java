@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 
 @SpringBootApplication
-@OpenAPIDefinition
+//@OpenAPIDefinition
 @EnableCaching
 public class SpringbootExerciseApplication {
 
