@@ -43,6 +43,10 @@ public class UserController {
         return usersService.addUser(newUser);
     }
 
+    @PostMapping("/create")
+    public void createUser(@RequestBody User user) {
+        usersService.createUser(user);
+    }
 
     @GetMapping("users/{id}")
     public User getUser(@PathVariable("id") Integer id) {

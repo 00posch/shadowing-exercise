@@ -2,24 +2,39 @@ package com.example.demo.percistence.repository;
 
 import com.example.demo.exceptions.UserNotUpdated;
 import com.example.demo.percistence.models.User;
+import org.mockito.Mock;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
+import org.springframework.util.ObjectUtils;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
+@Repository
+@Profile("qa")
 public class UserRepositoryStaticImpl implements UserRepository{
-    private List<User> usersList;
     private User user;
+    private List<User> usersList = new ArrayList<>();
 
-    public UserRepositoryStaticImpl(List<User> usersList) {
-        this.usersList = usersList;
+    public UserRepositoryStaticImpl() {
+        User user1 = new User(1, "userOne");
+        User user2 = new User(2, "userTwo");
+        User user3 = new User(3, "userThree");
+        this.usersList.add(user1);
+        this.usersList.add(user2);
+        this.usersList.add(user3);
     }
 
     @Override
     public Optional<User> getUserById(Integer id) {
-        return usersList.stream()
-                .filter(user1 -> user.getId().equals(id)).findAny();
+        for (User user : usersList) {
+            if (ObjectUtils.nullSafeEquals(user.getId(), id)) {
+                return Optional.of(user);
+            }
+        }
+        return Optional.empty();
     }
 
     @Override
@@ -30,9 +45,7 @@ public class UserRepositoryStaticImpl implements UserRepository{
 
     @Override
     public void saveUser(User usr) {
-        this.user = usr;
         usersList.add(usr);
-        System.out.println(usersList);
     }
 
     @Override

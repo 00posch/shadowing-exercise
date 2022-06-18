@@ -3,13 +3,14 @@ package com.example.demo.percistence.repository;
 import com.example.demo.exceptions.UserNotUpdated;
 import com.example.demo.percistence.models.User;
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
 @Repository
-@Primary
+@Profile("production")
 public class UserRepositoryDBImpl implements UserRepository {
     private User userEntity;
     //private JpaRepository<User, Integer> jpaRepository;
