@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.util.ObjectUtils;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -50,10 +51,11 @@ public class UserRepositoryStaticImpl implements UserRepository{
 
     @Override
     public void setUser(User user) {
-        if (getUserById(user.getId()).isPresent()) {
-            usersList.add(user);
-            System.out.println(usersList);
-        } else {
+        Optional<User> usr = getUserById(user.getId());
+        Optional<User> usr1 = usersList.stream().filter(i -> user.getId().equals(usr.get().getId())).findFirst();
+            if(usr1.isPresent()){
+                usr.get().setUsername(user.getUsername());
+            } else {
             throw new UserNotUpdated();
         }
     }

@@ -63,7 +63,4 @@ public class UserController {
         usersService.evictUserCache(user.getId());
         usersService.updateUser(user);
     }
-
-    //Optional.empty();
-
 }

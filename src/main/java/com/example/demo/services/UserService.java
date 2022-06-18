@@ -85,7 +85,7 @@ public class UserService {
         if (userRepository.getUserById(user.getId()).isEmpty()) {
             throw new UserNotFoundException();
         }
-         userRepository.saveUser(user);
+        userRepository.setUser(user);
     }
 
     ///////////////////////////////////////////////////////////////////////////////////
