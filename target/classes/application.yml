@@ -1,8 +1,10 @@
 server:
   port: ${SERVER_PORT:8080}
 spring:
-  profiles:
-    active: production
   output:
     ansi:
       enabled: ALWAYS
+  datasource:
+    url: ${MARIADB_URL:jdbc:mariadb://localhost:3306/shadowing_exercise}
+    username: ${MARIADB_USER:root}
+    password: ${MARIADB_PASSWORD:mypass}

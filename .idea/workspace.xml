@@ -6,10 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="46d02654-ee19-4337-9916-a30aff778f7f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/percistence/repository/UserRepositoryStaticImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/percistence/repository/UserRepositoryStaticImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-local-qa.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-qa.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-qa.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-tests.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-production.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-production.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-qa.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-qa.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/services/UserService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,21 +55,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/mindera/APosch/programming/shadowing-exercise",
-    "settings.editor.selected.configurable": "terminal"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/mindera/APosch/programming/shadowing-exercise&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="SpringbootExerciseApplication" type="Application" factoryName="Application" nameIsGenerated="true">
-      <envs>
-        <env name="spring.config.activate.on-profile" value="&quot;production&quot;" />
-      </envs>
       <option name="MAIN_CLASS_NAME" value="com.example.demo.SpringbootExerciseApplication" />
       <module name="demo" />
+      <option name="VM_PARAMETERS" value="-Dspring.profiles.active=production" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.demo.*" />
@@ -87,6 +89,17 @@
       <updated>1655477480132</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -11,7 +11,3 @@ spring:
     hibernate:
       ddl-auto: ${HIBERNATE_DDL_AUTO:update}
       show-sql: true
-  datasource:
-    url: ${MARIADB_URL:jdbc:mariadb://localhost:3306/shadowing_exercise}
-    username: ${MARIADB_USER:root}
-    password: ${MARIADB_PASSWORD:mypass}
